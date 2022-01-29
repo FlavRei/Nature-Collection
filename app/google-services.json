@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "961008102473",
+    "project_id": "nature-collection-3b3ce",
+    "storage_bucket": "nature-collection-3b3ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961008102473:android:64c7cece0b4536c644e398",
+        "android_client_info": {
+          "package_name": "com.flavrei.naturecollection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961008102473-psbse3dmetflhrb712so4m7dh44rmc27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSeFXzkzulLKkeRvjCFpNYbqUbQhtYc6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961008102473-psbse3dmetflhrb712so4m7dh44rmc27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961008102473:android:e4209977cbd5955e44e398",
+        "android_client_info": {
+          "package_name": "fr.flavrei.naturecollection"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961008102473-psbse3dmetflhrb712so4m7dh44rmc27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSeFXzkzulLKkeRvjCFpNYbqUbQhtYc6k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961008102473-psbse3dmetflhrb712so4m7dh44rmc27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
