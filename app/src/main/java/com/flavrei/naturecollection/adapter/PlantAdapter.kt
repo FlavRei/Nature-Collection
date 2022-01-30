@@ -9,13 +9,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.flavrei.naturecollection.PlantModel
+import com.flavrei.naturecollection.PlantPopup
+import com.flavrei.naturecollection.PlantRepository
 import com.flavrei.naturecollection.R
 import fr.flavrei.naturecollection.MainActivity
 
 class PlantAdapter(
-    private val context: MainActivity,
+    val context: MainActivity,
     private val plantList: List<PlantModel>,
-    private val layoutId: Int) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
+    private val layoutId: Int
+    ) : RecyclerView.Adapter<PlantAdapter.ViewHolder>() {
 
     // Boîte pour ranger tous les composants à contrôler
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -35,6 +38,9 @@ class PlantAdapter(
         // Récuperer les informations de la plante
         val currentPlant = plantList[position]
 
+        // Récupérer le repository
+        val repo = PlantRepository()
+
         // Utiliser Glide pour récupérer l'image à partir de son lien --> Composant
         Glide.with(context).load(Uri.parse(currentPlant.imageUrl)).into(holder.plantImage)
 
@@ -52,6 +58,20 @@ class PlantAdapter(
             holder.starIcon.setImageResource(R.drawable.ic_unstar)
         }
 
+        // Rajouter une interaction sur l'étoile
+        holder.starIcon.setOnClickListener {
+            // Inverser si le bouton est liké ou non
+            currentPlant.liked = !currentPlant.liked
+
+            // Mettre à jour l'objet plante
+            repo.updatePlant(currentPlant)
+        }
+
+        // Interaction lors du clic sur une plante
+        holder.itemView.setOnClickListener {
+            // Afficher la pop-up
+            PlantPopup(this, currentPlant).show()
+        }
     }
 
     override fun getItemCount(): Int = plantList.size
