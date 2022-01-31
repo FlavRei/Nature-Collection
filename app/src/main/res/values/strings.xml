@@ -2,6 +2,10 @@
 
     <string name="app_name">NatureEtMoi</string>
 
+    <string name="bottom_home_item">Accueil</string>
+    <string name="bottom_collection_item">Collection</string>
+    <string name="bottom_add_plant_item">Ajouter</string>
+
     <!-- Page d'Accueil -->
     <string name="home_page_title">À Découvrir</string>
     <string name="home_page_last_plant_section">Dernières Plantes</string>
@@ -11,7 +15,7 @@
 
     <!-- Page d'Ajout d'une Plante -->
     <string name="add_plant_page_title">Ajout d\'une Plante</string>
-    <string name="add_plant_page_upload_button">Charger une Image</string>
+    <string name="add_plant_page_upload_button">Charger Image</string>
     <string name="add_plant_page_name_input">@string/item_plant_name</string>
     <string name="add_plant_page_description_input">@string/item_plant_description</string>
 
