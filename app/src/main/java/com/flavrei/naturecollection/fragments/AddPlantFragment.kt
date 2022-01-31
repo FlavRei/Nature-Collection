@@ -32,7 +32,7 @@ class AddPlantFragment(
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater?.inflate(R.layout.fragment_add_plant, container, false)
+        val view = inflater.inflate(R.layout.fragment_add_plant, container, false)
 
         // Récupérer uploadedImage pour lui associer son composant
         uploadedImage = view.findViewById(R.id.preview_image)
@@ -52,25 +52,24 @@ class AddPlantFragment(
 
     private fun sendForm(view: View) {
         val repo = PlantRepository()
-        repo.uploadImage(file!!) {
-            val plantName = view.findViewById<EditText>(R.id.name_input).text.toString()
-            val plantDescription = view.findViewById<EditText>(R.id.description_input).text.toString()
-            val grow = view.findViewById<Spinner>(R.id.grow_spinner).selectedItem.toString()
-            val water = view.findViewById<Spinner>(R.id.water_spinner).selectedItem.toString()
-            val downloadImageUrl = downloadUri
+        repo.uploadImage(file!!)
+        val plantName = view.findViewById<EditText>(R.id.name_input).text.toString()
+        val plantDescription = view.findViewById<EditText>(R.id.description_input).text.toString()
+        val grow = view.findViewById<Spinner>(R.id.grow_spinner).selectedItem.toString()
+        val water = view.findViewById<Spinner>(R.id.water_spinner).selectedItem.toString()
+        val downloadImageUrl = downloadUri
 
-            // Créer un nouvel objet PlantModel
-            val plant = PlantModel(
-                UUID.randomUUID().toString(),
-                plantName,
-                plantDescription,
-                downloadImageUrl.toString(),
-                grow,
-                water
-            )
-            // Envoyer en BD
-            repo.insertPlant(plant)
-        }
+        // Créer un nouvel objet PlantModel
+        val plant = PlantModel(
+            UUID.randomUUID().toString(),
+            plantName,
+            plantDescription,
+            downloadImageUrl.toString(),
+            grow,
+            water
+        )
+        // Envoyer en BD
+        repo.insertPlant(plant)
     }
 
     private fun pickupImage() {
