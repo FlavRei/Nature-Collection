@@ -10,6 +10,8 @@
         <entry key="app/src/main/res/layout/fragment_add_plant.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_collection.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_horizontal_plant.xml" value="0.2923076923076923" />
+        <entry key="app/src/main/res/layout/item_vertical_plant.xml" value="0.2923076923076923" />
         <entry key="app/src/main/res/layout/popup_plants_details.xml" value="0.35625" />
         <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.2923076923076923" />
       </map>

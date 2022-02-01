@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val repo = PlantRepository()
 
         // Actualiser le titre de la page
-        findViewById<TextView>(R.id.page_title).text = resources.getString(string)
+        // findViewById<TextView>(R.id.page_title).text = resources.getString(string)
 
         // Mettre à jour la liste de plantes
         repo.updateData {
